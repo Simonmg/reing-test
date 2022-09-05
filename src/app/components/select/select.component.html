@@ -1,0 +1,26 @@
+<div>
+  <button class="select" (click)="!isOpen ? open(dropdown, origin) : close()" #origin>
+  
+    <ng-template [ngIf]="!isSearch" [ngIfElse]="searchTpl">
+      {{ label || model.name }}
+    </ng-template> 
+
+    <ng-template #searchTpl>
+      <input [formControl]="searchControl">
+    </ng-template>
+  
+  </button>
+  
+  <ng-template #dropdown>
+    <div class="select-menu p-10">
+      <cdk-virtual-scroll-viewport itemSize="32" [style.height.px]="visibleOptions * 32">
+        <div *ngIf="!options.length">No results found...</div>
+          <div *cdkVirtualFor="let option of options"
+               (click)="select(option)">
+                <ng-template [ngIf]="!optionTpl">{{option.name}}</ng-template>
+                <ng-template *ngTemplateOutlet="optionTpl; context: {$implicit: option}"></ng-template>
+        </div>
+      </cdk-virtual-scroll-viewport>
+    </div>
+  </ng-template>
+</div>

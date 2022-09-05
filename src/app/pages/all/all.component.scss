@@ -1,0 +1,19 @@
+.scroll {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.options-template {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+
+  }
+
+#logo {
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+}
+
+

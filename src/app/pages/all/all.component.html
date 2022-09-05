@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="select-options m-5">
+        <app-select [labelKey]="'Select a Framework'" 
+          [options]="languages" 
+          [optionTpl]="optionTpl"
+          (selectChange)="loadNews($event)"
+        ></app-select>
+        <ng-template class="options-content" #optionTpl let-option>
+          <div class="options-template my-5 cursor-pointer">
+            <img id="logo" class="pr-10" [src]="option.img"> 
+            <span>{{ option.name }}</span>
+          </div>
+          
+        </ng-template>
+      </div>
+    </div>
+    <div 
+      class="row scroll w-100"
+      infinite-scroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()"
+      (scrolledUp)="onScrollUp()"
+      [scrollWindow]="false"
+      >
+        <app-card 
+          class="col-6" 
+          *ngFor="let new of news; let index = index" 
+          [content]="new" 
+          [index]="index"
+        ></app-card>
+    </div>
+    
+  </div>
+</div>

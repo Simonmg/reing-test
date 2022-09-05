@@ -1,0 +1,64 @@
+:host(.home) {
+  background-color: #fcfcfc;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  box-shadow: 0 1px 4px 0 rgba(0, 21, 41, 0.12);
+  font-family: Baskerville;
+  
+  background-image: linear-gradient(to bottom, #ececec -32%, #fff 124%);
+
+  h1 {
+    color: #3b3b3b;
+    margin-left: 9.5rem;
+  }
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+
+  .nav-buttons {
+    display: inline-block;
+    zoom: 1;
+  }
+
+  .nav-buttons li {
+    margin-right: -1px;
+  }
+
+  .button {
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.75;
+    color: #6a6a6a;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    border: solid 1px #d6d6d6;
+    border-radius: 2px;
+    min-width: 6rem;
+    max-height: 1.9rem;
+  }
+
+  .link-active {
+    color: #1797ff;
+    border: solid 1px #1797ff;
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}

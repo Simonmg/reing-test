@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+
+  p {
+    margin: 0;
+  }
+
+  input,
+  button,
+  select,
+  optgroup,
+  textarea {
+    margin: initial;
+    line-height: initial;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@import "./styles/breakpoints.scss";
+@import "./styles/flex.scss";

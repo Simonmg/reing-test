@@ -1,0 +1,14 @@
+<div class="card-content m-5 pl-10">
+  <div class="content w-100 h-100" >
+    <div class="date" >
+      <span><app-clock></app-clock></span>
+      <span class="ml-5">{{ content?.created_at | dateAgo }}</span>
+    </div>
+    <div class="title cursor-pointer mt-5">
+      <a (click)="goToLink(content.story_url)">{{ content?.story_title }}</a>
+    </div>
+  </div>
+  <div class="icon-control">
+    <app-heard (click)="toggleFav()" [active]="content.fav"></app-heard>
+  </div>
+</div>
